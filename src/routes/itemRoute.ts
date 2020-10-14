@@ -1,11 +1,9 @@
-import { Request, Response } from "express";
+import { ItemController } from "../controllers/itemController";
 
 export class ItemRoute {
-  public routes(app): void {
-    app.route("/").get((req: Request, res: Response) => {
-      res.status(200).send({
-        message: "Get request successfully!!!",
-      });
-    });
+  public itemController: ItemController = new ItemController();
+
+  public routes(app: any): void {
+    app.route("/").get(this.itemController.getDefault);
   }
 }
