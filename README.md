@@ -13,3 +13,9 @@ $ brew services start mongodb/brew/mongodb-community
 ```
 $ npm run dev
 ```
+
+## Run Test
+
+```
+$ npm run test
+```
