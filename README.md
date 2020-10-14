@@ -13,6 +13,7 @@ $ brew services start mongodb/brew/mongodb-community
 ```
 $ npm run dev
 ```
+- http://localhost:3000/
 
 ## Run Test
 
