@@ -1,12 +1,15 @@
 import * as express from "express";
 import * as bodyParser from "body-parser";
+import { ItemRoute } from "./routes/itemRoute";
 
 class App {
   public app: express.Application;
+  public route: ItemRoute = new ItemRoute();
 
   constructor() {
     this.app = express();
     this.config();
+    this.route.routes(this.app);
   }
 
   private config(): void {
